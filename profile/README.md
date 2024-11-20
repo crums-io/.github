@@ -40,7 +40,7 @@ old architecture. In particular,
   proofs --- independently, off-chain.
 - **Distributed.** Tho the typical user won't, anyone can spin up their own timechain.
 
-See this project [overview](https://crums-io.github.io/crums-pub/)
+See this project [overview](https://crums-io.github.io/timechain/)
 
 ### Open Source Server
 
