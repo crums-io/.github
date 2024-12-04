@@ -33,26 +33,26 @@ as ledgers.
 
 The following is a partial list of already prototyped products under development:
 
-*   *morsels*. Binary archives for proving items in muliple ledgers.
+*   *morsels*. Binary archives for proving items in muliple ledgers.<br/>
     A morsel file is a bundle of provable receipts from ledgers. Morsel files support
     both the merging and fine-grained redaction of their contents. A morsel's data from one ledger
     often cross references an item in one of its other ledgers. As an example, morsels
     model timechains just like any other ledger: a ledger's state (it's hash) may be
     witnessed (referenced) in a crumtrail (the witness receipt) embedded in the same morsel.
-*   *log-ledge*. Calculates the hash of a log file (up to the n<sup>th</sup> or last line).
+*   *log-ledge*. Calculates the hash of a log file (up to the n<sup>th</sup> or last line).<br/>
     Calculating the hash of a log-like file this way allows one to later differentially
     reveal (and prove) any of its lines (and redact any word/token) against the committed hash.
     If you're already storing the hash of such files somewhere, calculating their hash this
     way enjoys these advantages. This may be especially relevant if log files are presently saved
     for their evidentiary value. Witnessing this hash on a timechain is a better choice than witnessing the
     straight hash of the log file.
-*   *sql-adaptor*. Defines a ledger using an SQL query and provides a live view of its proof structures.
+*   *sql-adaptor*. Defines a ledger using an SQL query and provides a live view of its proof structures.<br/>
     Though the adaptor maintains it proof structures in its own SQL tables, importantly,
     its workings do not involve annotating existing tables in anyway. Rather, it only
     ever reads existing tables: it shouldn't even have write-access to the tables it queries.
     All of a user's work designing a ledger is encapsulated in the SQL query they define to create a
     ledger-consistent view.
-*   *reports*. Simple template engine for generating reports from morsels.
+*   *reports*. Simple template engine for generating reports from morsels.<br/>
     This generates customizable, brandable, user-facing PDF from morsel data. Such "reports"
     can take many forms: an invoice, a receipt, a contract: anything that makes its way
     into a ledger. This works using a DSL that tells the software how entries in a morsel are
